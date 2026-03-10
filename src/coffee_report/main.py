@@ -1,3 +1,4 @@
+"""Точка входа CLI для построения отчётов по CSV-файлам."""
 from __future__ import annotations
 
 import argparse
