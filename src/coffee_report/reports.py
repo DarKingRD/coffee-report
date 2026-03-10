@@ -1,7 +1,7 @@
 """Описание отчётов и реестра для их регистрации и получения."""
 from __future__ import annotations
 
-from abc import ABC
+from abc import ABC, abstractmethod
 from collections import defaultdict
 from statistics import median
 from typing import Any
@@ -13,6 +13,7 @@ class Report(ABC):
     """Базовый класс для всех отчётов."""
     name: str
 
+    @abstractmethod
     def build(self, records: list[StudentRecord]) -> list[dict[str, Any]]:
         """Строит отчёт по переданным записям."""
         raise NotImplementedError
