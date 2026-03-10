@@ -6,6 +6,7 @@ from coffee_report.loader import load_records
 
 
 def test_load_records_from_multiple_files(tmp_path: Path) -> None:
+    """Проверяет загрузку записей из нескольких файлов."""
     first = tmp_path / "part1.csv"
     second = tmp_path / "part2.csv"
 
@@ -34,5 +35,6 @@ def test_load_records_from_multiple_files(tmp_path: Path) -> None:
 
 
 def test_load_records_raises_for_missing_file() -> None:
+    """Проверяет ошибку при отсутствии файла."""
     with pytest.raises(FileNotFoundError, match="File not found"):
         load_records(["missing.csv"])

@@ -10,6 +10,7 @@ from coffee_report.reports import build_registry
 
 
 def parse_args() -> argparse.Namespace:
+    """Разбирает аргументы командной строки."""
     parser = argparse.ArgumentParser(
         description="Build reports from students exam preparation CSV files."
     )
@@ -28,6 +29,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def format_table(rows: list[dict[str, object]], report_name: str) -> str:
+    """Форматирует строки отчёта в виде таблицы."""
     if report_name == "median-coffee":
         headers = {
             "student": "student",
@@ -39,6 +41,7 @@ def format_table(rows: list[dict[str, object]], report_name: str) -> str:
 
 
 def run() -> int:
+    """Запускает построение отчёта и выводит его в консоль."""
     args = parse_args()
 
     try:

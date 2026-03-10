@@ -5,6 +5,7 @@ from coffee_report.reports import MedianCoffeeReport, build_registry
 
 
 def test_median_coffee_report_builds_sorted_result() -> None:
+    """Проверяет расчёт и сортировку медианных трат на кофе."""
     records = [
         {
             "student": "Алексей Смирнов",
@@ -72,6 +73,7 @@ def test_median_coffee_report_builds_sorted_result() -> None:
 
 
 def test_registry_returns_report() -> None:
+    """Проверяет получение отчёта из реестра по имени."""
     registry = build_registry()
     report = registry.get("median-coffee")
 
@@ -79,6 +81,7 @@ def test_registry_returns_report() -> None:
 
 
 def test_format_table_contains_headers_and_data() -> None:
+    """Проверяет форматирование отчёта в таблицу."""
     rows = [
         {"student": "Иван Кузнецов", "median_coffee_spent": 650},
         {"student": "Дарья Петрова", "median_coffee_spent": 250},

@@ -6,6 +6,7 @@ from typing import TypedDict
 
 
 class StudentRecord(TypedDict):
+    """Запись с данными студента за один день подготовки."""
     student: str
     date: str
     coffee_spent: int
@@ -16,6 +17,7 @@ class StudentRecord(TypedDict):
 
 
 def load_records(file_paths: list[str]) -> list[StudentRecord]:
+    """Загружает записи студентов из CSV-файлов."""
     records: list[StudentRecord] = []
 
     for file_path in file_paths:
