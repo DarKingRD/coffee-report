@@ -8,8 +8,6 @@ env
 .env
 
 # python another files
-.pyc
-.pyo
-.pyd
-.pycache
 __pycache__/
+*.py[cod]
+.pytest_cache/
