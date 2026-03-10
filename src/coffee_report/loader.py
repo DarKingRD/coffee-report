@@ -1,3 +1,4 @@
+"""Загрузка и преобразование записей студентов из CSV-файлов."""
 from __future__ import annotations
 
 import csv

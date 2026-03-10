@@ -1,3 +1,4 @@
+"""Тесты для расчёта отчётов, форматирования таблицы и сценариев CLI."""
 from pathlib import Path
 
 from coffee_report.main import format_table

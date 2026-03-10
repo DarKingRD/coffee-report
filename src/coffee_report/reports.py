@@ -1,3 +1,4 @@
+"""Описание отчётов и реестра для их регистрации и получения."""
 from __future__ import annotations
 
 from abc import ABC

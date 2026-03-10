@@ -1,3 +1,4 @@
+"""Тесты для загрузки записей студентов из CSV-файлов."""
 from pathlib import Path
 
 import pytest
